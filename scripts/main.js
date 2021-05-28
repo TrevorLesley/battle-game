@@ -28,10 +28,10 @@
     }
 
     Battle.prototype.start = function() {
-      while(this.player.health > 0 && this.comp.health > 0) {
+
       this.attack();
       this.counter();
-      }
+
     }
 
 
@@ -50,7 +50,13 @@
     }
 
 const battle = new Battle;
-battle.start();
+const click = document.querySelector('.attack-button');
+
+click.addEventListener('click', function () {
+  if(battle.player.health > 0 && battle.comp.health > 0);
+  battle.start();
+})
+
 
 
 })();
