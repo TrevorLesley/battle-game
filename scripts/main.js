@@ -6,9 +6,9 @@
     // const fire = document.getElementById('elements').value = 'fire';
     // const air = document.getElementById('elements').value = 'air';
 
-    const element = document.querySelector('elements');
+    const $element = document.querySelector('#elements');
 
-    console.log(element);
+    
 
     const Battle = function () {
         const player = prompt(`Enter player name, then choose your class.`);
