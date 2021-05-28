@@ -28,28 +28,29 @@
     }
 
     Battle.prototype.start = function() {
+      while(this.player.health > 0 && this.comp.health > 0) {
       this.attack();
       this.counter();
+      }
     }
-
 
 
     Battle.prototype.attack = function() {
-      const random = Math.floor(Math.random() * 10);
-      let hp = this.comp.health - random;
+      const damage = Math.floor(Math.random() * 10);
+      let hp = this.comp.health - damage;
       this.comp.health = hp;
-
+      console.log(`comp ${battle.comp.health}`);
   }
 
     Battle.prototype.counter = function() {
-      const random = Math.floor(Math.random() * 10);
-      let hp = this.player.health - random;
+      const damage = Math.floor(Math.random() * 10);
+      let hp = this.player.health - damage;
       this.player.health = hp;
+      console.log(`player ${battle.player.health}`);
     }
-
 
 const battle = new Battle;
 battle.start();
-console.log(battle.comp.health);
-console.log(battle.player.health);
+
+
 })();
