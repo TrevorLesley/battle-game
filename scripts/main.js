@@ -6,12 +6,16 @@
     // const fire = document.getElementById('elements').value = 'fire';
     // const air = document.getElementById('elements').value = 'air';
 
-    const $element = document.querySelector('#elements');
-    $element(function (element) {
-        element.addEventListener('click', function () {
-            console.log($element.value);
-        })
-    });
+
+
+    var $element = document.querySelector('#elements');
+    $element.addEventListener("change", changeElement);
+
+    function changeElement() {
+      var value = $element.options[$element.selectedIndex].value;
+      console.log(value);
+    }
+
 
     const Battle = function () {
         // const player = prompt(`Enter player name, then choose your class.`);
@@ -56,13 +60,24 @@
     }
 
 const battle = new Battle();
-const click = document.querySelector('.attack-button');
+const attackClick = document.querySelector('.attack-button');
 
-click.addEventListener('click', function () {
+attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
 }
 })
+
+const playAgainClick = document.querySelector('.reset');
+
+playAgainClick.addEventListener('click', function () {
+  battle.player.health = 100;
+  battle.comp.health = 100;
+})
+
+
+
+
 
 
 })();
