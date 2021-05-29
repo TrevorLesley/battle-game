@@ -14,7 +14,7 @@
 
     const Battle = function () {
         // const player = prompt(`Enter player name, then choose your class.`);
-        this.player = new Player;
+        this.player = new Player
         this.comp = new Comp;
       }
 
@@ -31,7 +31,7 @@
 
     Battle.prototype.start = function() {
       this.attack();
-      this.counter();
+      setTimeout(function(){ battle.counter(); }, 2000);
 
     }
 
