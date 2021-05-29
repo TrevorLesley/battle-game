@@ -31,6 +31,10 @@ const charType = ({
     'choiceElement': 'Air',
     'title': 'Air',
     'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/wind_knight_by_jasontn_da7v75t.jpeg',
+<<<<<<< HEAD
 }
 )
 >>>>>>> 111ff25 (css integrated to html)
+=======
+})
+>>>>>>> 00c4698 (add css and updated progress bar)

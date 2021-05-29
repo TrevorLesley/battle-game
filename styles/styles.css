@@ -1,10 +1,18 @@
-
-
 .main-nav-bar {
   border-bottom: 1px solid #292C33;
 }
 
+img {
+width: 100%
+}
 
+.card-picture {
+  height: 300px;
+  width: auto;
+  border-radius: 50%;
+}
+
+<<<<<<< HEAD
 .player-cards {
   height: 80%;
 }
@@ -15,6 +23,11 @@
 
 .game-container {
   background-color: blue;
-  
+
   height: 500px;
+}
+
+body {
+  background-color: #e4efe7;
+
 }

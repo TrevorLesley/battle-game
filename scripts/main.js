@@ -6,13 +6,17 @@
     // const fire = document.getElementById('elements').value = 'fire';
     // const air = document.getElementById('elements').value = 'air';
 
-    const source = document.querySelector('#charList').innerHTML;
-    const template = Handlebars.compile(source);
-    const context = {
-        element: charType.results,
-    }
-    const html = template(context);
-    document.querySelector('.card-body').innerHTML = html;
+// <<<<<<< HEAD
+//     const source = document.querySelector('#charList').innerHTML;
+//     const template = Handlebars.compile(source);
+//     const context = {
+//         element: charType.results,
+//     }
+//     const html = template(context);
+//     document.querySelector('.card-body').innerHTML = html;
+// =======
+    var compHpDisplay = document.querySelector(".computer-hp");
+    var playerHpDisplay = document.querySelector(".player-hp");
 
     var $element = document.querySelector('#elements');
     $element.addEventListener("change", changeElement);
@@ -24,42 +28,47 @@
 
 
     const Battle = function () {
-        // const player = prompt(`Enter player name, then choose your class.`);
-        this.player = new Player;
+        this.player = new Player
         this.comp = new Comp;
       }
 
 
     const Player = function () {
-        this.charType = {charType};
         this.element = ($element.value);
         this.element = this.charType;
         this.health = 100;
     }
 
-    // console.log(this.player);
+
 
     const Comp = function () {
-        // this.charType = charType
         this.health = 100;
     }
 
     Battle.prototype.start = function() {
       this.attack();
-      setTimeout(function(){ battle.counter(); }, 2000);
+      setTimeout(function(){
+        battle.counter();
+        playerHpDisplay.innerHTML = (`${battle.player.health}%`);
+        playerHpDisplay.style.width = `${battle.player.health}%`;
+      }, 2000);
 
     }
 
 
     Battle.prototype.attack = function() {
-      const damage = Math.floor(Math.random() * 10);
+      const damage = Math.floor(Math.random() * 10) + 1;
+      alert(`Your hit was worth ${damage} point(s)!`);
       let hp = this.comp.health - damage;
       this.comp.health = hp;
       console.log(`comp ${battle.comp.health}`);
+      compHpDisplay.innerHTML = (`${battle.comp.health}%`);
+      compHpDisplay.style.width = `${battle.comp.health}%`;
   }
 
     Battle.prototype.counter = function() {
-      const damage = Math.floor(Math.random() * 10);
+      const damage = Math.floor(Math.random() * 10) + 1;
+      alert(`Computer's hit was worth ${damage} point(s)!`);
       let hp = this.player.health - damage;
       this.player.health = hp;
       let currentPlayerHp = battle.player.health;
@@ -72,6 +81,7 @@ const attackClick = document.querySelector('.attack-button');
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
+
 }
 })
 
@@ -80,18 +90,10 @@ const playAgainClick = document.querySelector('.reset');
 playAgainClick.addEventListener('click', function () {
   battle.player.health = 100;
   battle.comp.health = 100;
+  compHpDisplay.innerHTML = "100%";
+  playerHpDisplay.innerHTML = "100%";
+  compHpDisplay.style.width = "100%";
+  playerHpDisplay.style.width = "100%";
 })
-
-
-const source = document.querySelector('#playerhpbar-template').innerHTML;
-const template = Handlebars.compile(source);
-const context = {
-  playerhp: battle.player.health,
-}
-const html = template(context);
-// console.log(html);
-document.querySelector('.player-hp-status').innerHTML = html;
-
-
 
 })();
