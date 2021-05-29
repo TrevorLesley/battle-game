@@ -9,8 +9,6 @@
     const $element = document.querySelector('#elements');
 
     console.log($element.value);
-    console.log($element.value);
-    console.log($element.value);
 
     const Battle = function () {
         // const player = prompt(`Enter player name, then choose your class.`);
