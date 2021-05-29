@@ -7,8 +7,11 @@
     // const air = document.getElementById('elements').value = 'air';
 
     const $element = document.querySelector('#elements');
-
-    console.log($element.value);
+    $element(function (element) {
+        element.addEventListener('click', function () {
+            console.log($element.value);
+        })
+    });
 
     const Battle = function () {
         // const player = prompt(`Enter player name, then choose your class.`);
@@ -17,13 +20,17 @@
       }
 
 
-    const Player = function ({ name } = {}) {
-        this.name = name;
-        this.element =
+    const Player = function () {
+        this.charType = {charType};
+        this.element = ($element.value);
+        this.element = this.charType;
         this.health = 100;
     }
 
+    // console.log(this.player);
+
     const Comp = function () {
+        // this.charType = charType
         this.health = 100;
     }
 
