@@ -62,6 +62,7 @@
       const damage = Math.floor(Math.random() * 10);
       let hp = this.player.health - damage;
       this.player.health = hp;
+      let currentPlayerHp = battle.player.health;
       console.log(`player ${battle.player.health}`);
     }
 
@@ -82,7 +83,14 @@ playAgainClick.addEventListener('click', function () {
 })
 
 
-
+const source = document.querySelector('#playerhpbar-template').innerHTML;
+const template = Handlebars.compile(source);
+const context = {
+  playerhp: battle.player.health,
+}
+const html = template(context);
+// console.log(html);
+document.querySelector('.player-hp-status').innerHTML = html;
 
 
 

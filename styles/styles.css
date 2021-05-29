@@ -6,5 +6,15 @@
 
 
 .player-cards {
+  height: 80%;
+}
+
+.player-card {
+  height: 60%
+}
+
+.game-container {
+  background-color: blue;
   
+  height: 500px;
 }

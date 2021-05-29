@@ -1,3 +1,4 @@
+
 const charType = ({
     'results': [{
         'choiceElement': 'Water',
@@ -16,6 +17,7 @@ const charType = ({
         'title': 'Fire',
         'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/fire_kirin_by_sakimichan_d4r884s.jpeg',
 
+<<<<<<< HEAD
     },
     {
         'choiceElement': 'Air',
@@ -23,3 +25,12 @@ const charType = ({
         'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/wind_knight_by_jasontn_da7v75t.jpeg',
     }]
 })
+=======
+},
+{
+    'choiceElement': 'Air',
+    'title': 'Air',
+    'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/wind_knight_by_jasontn_da7v75t.jpeg',
+}
+)
+>>>>>>> 111ff25 (css integrated to html)
