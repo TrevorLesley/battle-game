@@ -1,27 +1,27 @@
 const charType = ({
     'choiceElement': 'Water',
-    'title': 'Waterbender',
+    'title': 'Water',
     'Images': [{
 
     }]
 },
 {
     'choiceElement': 'Earth',
-    'title': 'Earthbender',
+    'title': 'Earth',
     'Images': [{
 
     }]
 },
 {
     'choiceElement': 'Fire',
-    'title': 'Firebender',
+    'title': 'Fire',
     'Images': [{
 
     }]
 },
 {
     'choiceElement': 'Air',
-    'title': 'Air Nomad',
+    'title': 'Air',
     'Images': [{
 
     }]
