@@ -6,13 +6,15 @@
     // const fire = document.getElementById('elements').value = 'fire';
     // const air = document.getElementById('elements').value = 'air';
 
-    const source = document.querySelector('#charList').innerHTML;
+    const source = document.querySelector('.char-card').innerHTML;
     const template = Handlebars.compile(source);
+    console.log(charType);
     const context = {
         element: charType.results,
     }
+    console.log(context.element);
     const html = template(context);
-    document.querySelector('.card-body').innerHTML = html;
+    document.querySelector('#playerCard').innerHTML = html;
 
     var $element = document.querySelector('#elements');
     $element.addEventListener("change", changeElement);
@@ -31,7 +33,7 @@
 
 
     const Player = function () {
-        this.charType = {charType};
+        // this.charType = {charType};
         this.element = ($element.value);
         this.element = this.charType;
         this.health = 100;
@@ -66,8 +68,8 @@
     }
 
 const battle = new Battle();
-const attackClick = document.querySelector('.attack-button');
-
+    const attackClick = document.querySelector('.attackButton');
+    console.log(attackClick);
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();

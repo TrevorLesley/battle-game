@@ -1,13 +1,13 @@
 
 
-const source = document.querySelector('#playerhpbar-template').innerHTML;
-const template = Handlebars.compile(source);
-const context = {
-  playerhp: battle.player.health,
-}
-const html = template(context);
-// console.log(html);
-document.querySelector('.player-hp-status').innerHTML = html;
+// const source = document.querySelector('#playerhpbar-template').innerHTML;
+// const template = Handlebars.compile(source);
+// const context = {
+//   playerhp: battle.player.health,
+// }
+// const html = template(context);
+// // console.log(html);
+// document.querySelector('.player-hp-status').innerHTML = html;
 
 
 
