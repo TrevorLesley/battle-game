@@ -24,5 +24,5 @@ const charType = ({
         'title': 'Air',
         'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/wind_knight_by_jasontn_da7v75t.jpeg',
     },
-    }]
+    ]
 })

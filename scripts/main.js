@@ -6,6 +6,16 @@
     var playerAttackMessage = document.querySelector(".player-status");
     var compAttackMessage = document.querySelector(".comp-status");
 
+    const source = document.querySelector('.char-card').innerHTML;
+    const template = Handlebars.compile(source);
+    console.log(charType);
+    const context = {
+        element: charType.results,
+    }
+    console.log(context.element);
+    const html = template(context);
+    document.querySelector('#playerCard').innerHTML = html;
+
     var $element = document.querySelector('#elements');
     $element.addEventListener("change", changeElement);
 
@@ -67,8 +77,8 @@
     }
 
 const battle = new Battle();
-const attackClick = document.querySelector('.attack-button');
-
+    const attackClick = document.querySelector('.attackButton');
+    console.log(attackClick);
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
