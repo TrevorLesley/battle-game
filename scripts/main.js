@@ -6,7 +6,7 @@
     // const fire = document.getElementById('elements').value = 'fire';
     // const air = document.getElementById('elements').value = 'air';
 
-    const source = document.querySelector('').innerHTML;
+    const source = document.querySelector('#charList').innerHTML;
     const template = Handlebars.compile(source);
     const context = {
         element: charType.results,

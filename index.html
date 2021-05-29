@@ -52,7 +52,7 @@
             <div class="card col-12 col-md-6 text-center player-card">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body comp-card-body">
-                    <h5 class="card-title">Computer Name(possibly change name depending on random #?) </h5>
+                    <h5 class="card-title">{{title}}</h5>
                     <p class="card-text">This is where we will write what the computer's attack was</p>
                     <div class="progress">
                         <div class="progress-bar computer-hp" role="progressbar" style="width: 25%;" aria-valuenow="25"
@@ -60,15 +60,12 @@
                     </div>
                     <button type="button" name="placeholder" class="">This is a placeholder</button>
                 </div>
-                <<<<<<< HEAD </div>
-
             </div>
-            <button type="button" name="button" class="reset">Play Again</button>
-        </div> <!-- container end  -->
 
-        <script src='./scripts/char-types.js'></script>
-        <script src="./scripts/main.js"> </script>
-        =======
+        </div>
+        <button type="button" name="button" class="reset">Play Again</button>
+    </div> <!-- container end  -->
+
 
     </div>
     <button type="button" name="button" class="reset">Play Again</button>
@@ -78,14 +75,13 @@
 
 
     <script id="playerhpbar-template" type="text/x-handlebars-template">
-          <div class="progress-bar computer-hp" role="progressbar" style="width: {{playerhp}}%;" aria-valuenow="{{playerhp}}" aria-valuemin="0" aria-valuemax="100">25%</div>
+          <div class="progress-bar computer-hp" role="progressbar" aria-valuenow="{{playerhp}}" aria-valuemin="0" aria-valuemax="100">25%</div>
        </script>
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="./scripts/handlebars-pg.js"> </script>
-    <script src="./scripts/char-types.js"> </script>
+    <script id='charList' src="./scripts/char-types.js" type='text/x-handlebars-template'> </script>
     <script src="./scripts/main.js"> </script>
-    >>>>>>> 94ad7792c3c4e76b6e5e7810e6f060b86e38546d
 
 
 
