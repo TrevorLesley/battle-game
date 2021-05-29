@@ -6,7 +6,13 @@
     // const fire = document.getElementById('elements').value = 'fire';
     // const air = document.getElementById('elements').value = 'air';
 
-
+    const source = document.querySelector('').innerHTML;
+    const template = Handlebars.compile(source);
+    const context = {
+        element: charType.results,
+    }
+    const html = template(context);
+    document.querySelector('.card-body').innerHTML = html;
 
     var $element = document.querySelector('#elements');
     $element.addEventListener("change", changeElement);
@@ -19,7 +25,7 @@
 
     const Battle = function () {
         // const player = prompt(`Enter player name, then choose your class.`);
-        this.player = new Player
+        this.player = new Player;
         this.comp = new Comp;
       }
 
