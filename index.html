@@ -12,38 +12,29 @@
 
 <body>
     <header class="main-nav-bar">
-        <section id='dropdown'>
-            <section>
-                <div class='dropdown-selection'>
-                    <script type='text/x-handlebars-template' class='char-card'>
-                        {{#each element}}
-                            <img src='{{image}}' class='card-img-top card-picture' alt='{{title}}'>
-                            <h3>{{title}}
-                            </h3>
-                            <p>{{description}}
-                            </p>
-                        {{/each}}
-                    </script>
-                </div>
-            </section>
-        </section>
+        <select id='elements'>
+            <option class='element' value="">Choose an element.</option>
+            <option class='element' value="water">Water</option>
+            <option class='element' value="earth">Earth</option>
+            <option class='element' value="fire">Fire</option>
+            <option class='element' value="air">Air</option>
+        </select>
+        <button type="button" name="button" class ="reset reset-button">Play Again
+        </button>
     </header>
 
 
-    <div class="container">
+    <div class="container game-container">
         <!-- container start -->
-        <div class="row justify-content-around align-items-center player-cards">
-            <div class="card col-12 col-md-4 mt-4 text-center player-card">
-                <script id='playerCard' class='char-card' type='text/x-handlebars-template'>
-                {{#each element}}
-            <img src="{{image}}" class="card-img-top card-picture" alt="element picture">
+      <div class="row justify-content-around align-items-center player-cards">
+          <div class="card col-12 col-md-5 mt-4 text-center player-card">
+            <img src="images/earth_elemental_by_stevegoad_d2pjakv.jpeg" class="card-img-top card-picture" alt="element picture">
             <div class="card-body player-card-body">
               <h5 class="card-title-one">{{title}}
               </h5>
-              <p class="card-text player-status">Player Status
-              </p>
+
               <div class="progress">
-                <div class="progress-bar player-hp" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
+                <div class="progress-bar hp-bar player-hp" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
                 </div>
               </div>
             </div>
@@ -51,28 +42,36 @@
         </script>
             </div>
 
-            <div class="card col-12 col-md-4 text-center player-card">
-                <img src="images/earth-elemental.jpeg" class="card-img-top card-picture" alt="card picture">
-                <div class="card-body comp-card-body">
-                    <h5 class="card-title">Computer Name
-                    </h5>
-                    <p class="card-text comp-status">Comp status
-                    </p>
-                    <div class="progress">
-                        <div class="progress-bar computer-hp" role="progressbar" style="width: 100%;"
-                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
-                        </div>
-                    </div>
+          <div class="card col-12 col-md-5 mt-4 text-center player-card">
+            <img src="images/earth_elemental_by_stevegoad_d2pjakv.jpeg" class="card-img-top card-picture" alt="card picture">
+            <div class="card-body comp-card-body">
+              <h5 class="card-title">Computer Name
+              </h5>
+
+              <div class="progress">
+                <div class="progress-bar hp-bar computer-hp" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
                 </div>
             </div>
         </div>
 
-        <section class="row justify-content-center reset-button">
-            <button type="button" name="attack" class="attack-button">Attack!</button>
+      <div class="game-feed">
+        <section class="game-feed-player">
+          <p class="card-text player-status">Player Status
+          </p>
+        <!-- </section>
+
+        <section class="game-feed-comp"> -->
+          <p class="card-text comp-status">Comp status
+          </p>
         </section>
-        <section class="row justify-content-center reset-button">
-            <button type="button" name="button" class="reset">Play Again</button>
+      </div>
+
+        <section class="row align-items-center bottom-buttons">
+          <button type="button" name="attack" class="attack-button">Attack!
+          </button>
+
         </section>
+
     </div> <!-- container end  -->
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

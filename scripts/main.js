@@ -44,7 +44,7 @@
       console.log(this.comp.health);
       setTimeout(function(){
        battle.counter();
-      }, 2000);
+     }, 2000);
 
     }
 
