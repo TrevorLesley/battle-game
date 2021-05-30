@@ -50,7 +50,8 @@
       this.comp.health = hp;
       compHpDisplay.innerHTML = (`${battle.comp.health}%`);
       compHpDisplay.style.width = `${battle.comp.health}%`;
-  }
+      document.querySelector('.attack-button').style.visibility = 'hidden';
+      }
 
     Battle.prototype.counter = function() {
       const damage = Math.floor(Math.random() * 10) + 1;
@@ -62,6 +63,7 @@
       this.player.health = hp;
       playerHpDisplay.innerHTML = (`${battle.player.health}%`);
       playerHpDisplay.style.width = `${battle.player.health}%`;
+      document.querySelector('.attack-button').style.visibility = 'visible';
     }
 
 const battle = new Battle();
