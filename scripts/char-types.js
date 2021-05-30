@@ -1,28 +1,28 @@
 
 const charType = ({
     'results': [{
-        'choiceElement': 'Water',
-        'title': 'Water',
-        'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/female_water_fighter__elemental__by_zachdb_d5qwm87-fullview.jpeg',
+        'title': 'Water Elemental',
+        'image': '/Users/newuser/Documents/Code/Homework/battle-game/images/water-elemental.jpeg',
+        'description': ''
 
     },
     {
-        'choiceElement': 'Earth',
-        'title': 'Earth',
-        'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/earth_elemental_by_stevegoad_d2pjakv.jpeg',
+        'title': 'Earth Elemental',
+        'image': '/Users/newuser/Documents/Code/Homework/battle-game/images/earth-elemental.jpeg',
+        'description': ''
 
     },
     {
-        'choiceElement': 'Fire',
-        'title': 'Fire',
-        'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/fire_kirin_by_sakimichan_d4r884s.jpeg',
+        'title': 'Fire Elemental',
+        'image': '/Users/newuser/Documents/Code/Homework/battle-game/images/fire-elemental.jpeg',
+        'description': ''
 
 
     },
     {
-        'choiceElement': 'Air',
-        'title': 'Air',
-        'Image': '/Users/newuser/Documents/Code/Homework/battle-game/images/wind_knight_by_jasontn_da7v75t.jpeg',
+        'title': 'Air Elemental',
+        'image': '/Users/newuser/Documents/Code/Homework/battle-game/images/wind-elemental.jpeg',
+        'description': ''
     },
     ]
 })

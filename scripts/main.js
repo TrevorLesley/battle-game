@@ -8,11 +8,10 @@
 
     const source = document.querySelector('.char-card').innerHTML;
     const template = Handlebars.compile(source);
-    console.log(charType);
     const context = {
         element: charType.results,
     }
-    console.log(context.element);
+    
     const html = template(context);
     document.querySelector('#playerCard').innerHTML = html;
 
