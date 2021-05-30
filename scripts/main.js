@@ -31,6 +31,7 @@
     //   }
     // }
 
+
     const Battle = function () {
         this.player = new Player
         this.comp = new Comp;
@@ -49,16 +50,14 @@
       this.attack();
       setTimeout(function(){
        battle.counter();
+
       }, 2000);
     }
 
-    function createAnimation(){
-
-    }
 
 
     Battle.prototype.attack = function() {
-      createCompAnimation.classList.remove('animate');
+      // createCompAnimation.classList.remove('animate');
       const damage = Math.floor(Math.random() * 10) + 1;
       playerAttackMessage.innerHTML = `Your hit was worth ${damage} point(s)!`;
       let hp = this.comp.health - damage;
@@ -69,12 +68,12 @@
       compHpDisplay.innerHTML = (`${battle.comp.health}%`);
       compHpDisplay.style.width = `${battle.comp.health}%`;
       document.querySelector('.attack-button').style.visibility = 'hidden';
-      createPlayerAnimation.classList.add('animate');
+      // createPlayerAnimation.classList.add('animate');
       }
 
     Battle.prototype.counter = function() {
-      createPlayerAnimation.classList.remove('animate');
-      createCompAnimation.classList.add('animate');
+      // createPlayerAnimation.classList.remove('animate');
+      // createCompAnimation.classList.add('animate');
       const damage = Math.floor(Math.random() * 10) + 1;
       compAttackMessage.innerHTML = `Computer's hit was worth ${damage} point(s)!`;
       let hp = this.player.health - damage;
@@ -89,8 +88,8 @@
     }
 
 const battle = new Battle();
-const attackClick = document.querySelector('.attack-button');
-
+    const attackClick = document.querySelector('.attack-button');
+    console.log(attackClick);
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
