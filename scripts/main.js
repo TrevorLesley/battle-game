@@ -106,6 +106,7 @@ attackClick.addEventListener('click', function () {
 const playAgainClick = document.querySelector('.reset');
 
 playAgainClick.addEventListener('click', function () {
+  document.querySelector('.game-container').style.visibility = 'hidden';
   battle.player.health = 100;
   battle.comp.health = 100;
   compHpDisplay.innerHTML = "100%";
@@ -153,10 +154,13 @@ elements.forEach(function(element){
     }
     if (selectedElement) {
       document.querySelector('.game-container').style.visibility = 'visible';
-      compImage.src= charType.results[Math.floor(Math.random() * 5)].Image;
+      var randomEnemy = Math.floor(Math.random() * 3);
+      compImage.src= charType.results[randomEnemy].Image;
+      compName.innerHTML = charType.results[randomEnemy].title;
       }
   })
 })
+
 
 // if (battle.player.health > battle.comp.health) {
 //   playerAttackMessage.innerHTML = 'YOU WIN!';
