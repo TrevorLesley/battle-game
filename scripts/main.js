@@ -9,9 +9,8 @@
     var compName = document.querySelector(".comp-name");
     var createPlayerAnimation = document.querySelector(".player-image");
     var createCompAnimation = document.querySelector(".comp-image");
-    var playerImage = document.querySelector(".card-picture");
-
-
+    var playerImage = document.querySelector(".player-image");
+    var compImage = document.querySelector(".comp-image");
 
 
 
@@ -54,10 +53,11 @@
 
     Battle.prototype.start = function() {
       this.attack();
-      setTimeout(function(){
-       battle.counter();
-
-      }, 2000);
+      if(this.comp.health > 0) {
+        setTimeout(function(){
+         battle.counter();
+        }, 2000);
+      }
     }
 
 
@@ -151,10 +151,20 @@ elements.forEach(function(element){
       playerImage.src="images/earth-elemental.jpeg";
       break;
     }
+    if (selectedElement) {
+      document.querySelector('.game-container').style.visibility = 'visible';
+      compImage.src= charType.results[Math.floor(Math.random() * 5)].Image;
+      }
   })
 })
 
-
+// if (battle.player.health > battle.comp.health) {
+//   playerAttackMessage.innerHTML = 'YOU WIN!';
+//   compAttackMessage.innerHTML = '';
+// } else if (battle.player.health < battle.comp.health){
+//   playerAttackMessage.innerHTML = '';
+//   compAttackMessage.innerHTML = 'YOU LOSE!';
+// }
 
 
 })();

@@ -7,6 +7,7 @@
 img {
 width: 100%
 }
+
 .player-cards {
   height: 85%;
   color: #222831;
@@ -15,6 +16,10 @@ width: 100%
 .player-card {
   height: 90%;
   box-shadow: 4px 4px 8px #f9dfdc;
+}
+
+.player-card-play {
+
 }
 .card-picture {
   height: 70%;
@@ -27,7 +32,10 @@ width: 100%
   background-color: #393E46;
   height: 900px;
   box-shadow: 4px 4px 8px #f9dfdc;
+  visibility: hidden;
   }
+
+
 .game-feed {
   display: flex;
   justify-content: space-evenly;
