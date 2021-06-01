@@ -3,22 +3,26 @@ const charType = ({
     'results': [{
 
         'choiceElement': 'Water',
-        'title': 'Befrese: Hyrdokensis',
+        'Description': 'Befrese: Hydrokinesis',
         'Image': './images/water-elemental.jpeg',
     },
     {
         'choiceElement': 'Earth',
-        'title': 'Gutrium: Geokinesis',
+        'Description': 'Gutrium: Geokinesis',
+        'title': 'Gutrium',
         'Image': './images/earth-elemental.jpeg',
     },
     {
         'choiceElement': 'Fire',
-        'title': 'Vustrite: Pyrokinesis',
+        'Description': 'Vustrite: Pyrokinesis',
+        'title': 'Vustrite',
         'Image': './images/fire-elemental.jpeg',
+
     },
     {
         'choiceElement': 'Air',
-        'title': 'Uthine the Wind Knight: Wind Manipulation',
+        'Description': 'Uthine: Air Manipulation',
+        'title': 'Uthine the Wind Knight',
         'Image': './images/wind-elemental.jpeg',
     },
     ]

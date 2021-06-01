@@ -1,7 +1,7 @@
 .main-nav-bar {
   border-bottom: 1px solid #292C33;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 img {
@@ -18,9 +18,9 @@ width: 100%
   box-shadow: 4px 4px 8px #f9dfdc;
 }
 
-.player-card-play {
+/* .player-card-play {
 
-}
+} */
 .card-picture {
   height: 70%;
   width: 100%;
@@ -77,6 +77,7 @@ background-color: #4CA9BC;
 .reset-button {
   width: 20%;
   padding: 10px;
+  margin: auto;
 }
 
 .hp-bar {
@@ -187,11 +188,14 @@ background-color: #4CA9BC;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+  width: auto;
+  margin: left;
 }
 
 .dropdown-content {
@@ -210,7 +214,11 @@ background-color: #4CA9BC;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -218,7 +226,6 @@ background-color: #4CA9BC;
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
-=======
   width: 20%;
   padding: 10px;
   margin-top: 20px;
@@ -235,5 +242,4 @@ background-color: #4CA9BC;
 
   background-color: green;
   font-size: 16px;
->>>>>>> 821b2814b4b9d56f05af9c394a3de5d786f5cc26
 }
