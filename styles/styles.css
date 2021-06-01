@@ -13,17 +13,19 @@ width: 100%
 }
 .player-card {
   height: 90%;
-
+  box-shadow: 4px 4px 8px #f9dfdc;
 }
 .card-picture {
   height: 70%;
   width: 100%;
   border-radius: 50%;
   margin-top: 20px;
+  box-shadow:5px 5px 5px grey;
 }
 .game-container {
   background-color: #393E46;
   height: 900px;
+  box-shadow: 4px 4px 8px #f9dfdc;
   }
 .game-feed {
   display: flex;
@@ -32,15 +34,16 @@ width: 100%
   text-align: center;
 }
 .game-feed-player {
-
-  padding: 20px;
-  margin: 20px;
+  padding: 8px;
+  margin: 10px;
+  font-size: 25px;
 }
-.game-feed-comp {
+/* .game-feed-comp {
   border: 1px solid black;
   padding: 20px;
   margin: 20px;
-}
+  font-size: 16px;
+} */
 body {
 background-color: #4CA9BC;
 /* #E4EFE7; */
@@ -55,25 +58,34 @@ background-color: #4CA9BC;
 .attack-button {
   width: 20%;
   padding: 10px;
-  margin-top: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  margin-top: 10px;
   margin-bottom: 20px;
+  position: relative;
 }
+
 .reset-button {
   width: 20%;
   padding: 10px;
 }
+
 .hp-bar {
-  background-color: #4CA9BC;
-  font-size: 16px;
+    background-color: green;
+    font-size: 16px;
+  }
+
+.health-status {
+  background-color: #e50e18;
+  height: 3rem;
+  border-radius: 0.50rem;
 }
 
-.attack-button {
-
-
+.card-title-one {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
-
-
-
 
 .animate {
   -webkit-animation: animation 1500ms linear both;
@@ -212,7 +224,7 @@ background-color: #4CA9BC;
 
 .hp-bar {
 
-  background-color: #4CA9BC;
+  background-color: green;
   font-size: 16px;
 >>>>>>> 821b2814b4b9d56f05af9c394a3de5d786f5cc26
 }
