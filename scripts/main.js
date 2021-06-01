@@ -99,8 +99,8 @@ const battle = new Battle();
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
-
 }
+
 })
 
 const playAgainClick = document.querySelector('.reset');
@@ -162,13 +162,7 @@ elements.forEach(function(element){
 })
 
 
-// if (battle.player.health > battle.comp.health) {
-//   playerAttackMessage.innerHTML = 'YOU WIN!';
-//   compAttackMessage.innerHTML = '';
-// } else if (battle.player.health < battle.comp.health){
-//   playerAttackMessage.innerHTML = '';
-//   compAttackMessage.innerHTML = 'YOU LOSE!';
-// }
+
 
 
 })();
