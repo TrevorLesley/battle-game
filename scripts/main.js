@@ -9,12 +9,14 @@
     var compName = document.querySelector(".comp-name");
     var createPlayerAnimation = document.querySelector(".player-image");
     var createCompAnimation = document.querySelector(".comp-image");
-    var imgElement = document.querySelector(".selected-image-element");
+    var playerImage = document.querySelector(".card-picture");
 
 
-    
 
-    // var $element = document.querySelector('#elements');
+
+
+
+
     // $element.addEventListener("change", changeElement);
     //
     // function changeElement() {
@@ -93,7 +95,7 @@
 
 const battle = new Battle();
     const attackClick = document.querySelector('.attack-button');
-    console.log(attackClick);
+
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
@@ -124,6 +126,34 @@ const context = {
 const html = template(context);
 // console.log(html);
 document.querySelector('.dropdown-content').innerHTML = html;
+
+
+var elements = document.querySelectorAll('.selected-element')
+
+elements.forEach(function(element){
+  element.addEventListener('click', function(event){
+    const selectedElement = event.target.innerHTML;
+    switch (selectedElement) {
+      case 'Water':
+      playerName.innerHTML = "Befrese"
+      playerImage.src="images/water-elemental.jpeg";
+      break;
+      case 'Fire':
+      playerName.innerHTML = "Vustrite"
+      playerImage.src="images/fire-elemental.jpeg";
+      break;
+      case 'Air':
+      playerName.innerHTML = "Uthine the Wind Knight";
+      playerImage.src="images/wind-elemental.jpeg";
+      break;
+      case 'Earth':
+      playerName.innerHTML = "Gutrium";
+      playerImage.src="images/earth-elemental.jpeg";
+      break;
+    }
+  })
+})
+
 
 
 

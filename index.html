@@ -15,8 +15,8 @@
           <script type="text/x-handlebars-template" class ="char-card">
           {{#each element}}
             <div class="">
-              <a href=""><img src="{{Image}}" alt="" class="selected-image-element"></a>
-              <h3>{{choiceElement}}</h3>
+              <img src="{{Image}}" alt="">
+              <h3 class="selected-element">{{choiceElement}}</h3>
               <p>{{Desciption}}</p>
             </div>
             {{/each}}
@@ -32,8 +32,7 @@
           <div class="card col-12 col-md-5 mt-4 text-center player-card">
             <img src="images/water-elemental.jpeg" class="card-img-top card-picture" alt="element picture">
             <div class="card-body player-card-body">
-              <h5 class="card-title-one">Earth Warrior
-              </h5>
+              <h5 class="card-title-one player-name"></h5>
               <div class="progress health-status">
                 <div class="progress-bar hp-bar player-hp" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
                 </div>
@@ -43,8 +42,7 @@
           <div class="card col-12 col-md-5 mt-4 text-center player-card">
             <img src="images/wind-elemental.jpeg" class="card-img-top card-picture" alt="card picture">
             <div class="card-body comp-card-body">
-              <h5 class="card-title-one">Wind Warrior
-              </h5>
+              <h5 class="card-title-one">Wind Warrior</h5>
               <div class="progress health-status">
                 <div class="progress-bar hp-bar computer-hp" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
                 </div>
