@@ -10,12 +10,12 @@
   <body>
     <header class="main-nav-bar">
         <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
+        <button class="dropbtn">Choose A Player</button>
         <div class="dropdown-content">
           <script type="text/x-handlebars-template" class ="char-card">
           {{#each element}}
             <div class="">
-              <img src="{{Image}}" alt="">
+              <a href=""><img src="{{Image}}" alt="" class="selected-image-element"></a>
               <h3>{{choiceElement}}</h3>
               <p>{{Desciption}}</p>
             </div>

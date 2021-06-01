@@ -9,6 +9,10 @@
     var compName = document.querySelector(".comp-name");
     var createPlayerAnimation = document.querySelector(".player-image");
     var createCompAnimation = document.querySelector(".comp-image");
+    var imgElement = document.querySelector(".selected-image-element");
+
+
+    
 
     // var $element = document.querySelector('#elements');
     // $element.addEventListener("change", changeElement);

@@ -16,7 +16,7 @@ const charType = ({
     {
         'choiceElement': 'Fire',
         'title': 'Vustrite: Pyrokinesis',
-        'Image': './images/water-elemental.jpeg',
+        'Image': './images/fire-elemental.jpeg',
 
     },
     {
