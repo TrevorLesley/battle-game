@@ -1,6 +1,6 @@
+
 (function() {
     'use strict';
-
     var compHpDisplay = document.querySelector(".computer-hp");
     var playerHpDisplay = document.querySelector(".player-hp");
     var playerAttackMessage = document.querySelector(".player-status");
@@ -11,11 +11,6 @@
     var createCompAnimation = document.querySelector(".comp-image");
     var playerImage = document.querySelector(".player-image");
     var compImage = document.querySelector(".comp-image");
-
-
-
-
-
     // $element.addEventListener("change", changeElement);
     //
     // function changeElement() {
@@ -35,22 +30,16 @@
     //       break;
     //   }
     // }
-
-
     const Battle = function () {
         this.player = new Player
         this.comp = new Comp;
       }
-
     const Player = function () {
         this.health = 100;
     }
-
-
     const Comp = function () {
         this.health = 100;
     }
-
     Battle.prototype.start = function() {
       this.attack();
       if(this.comp.health > 0) {
@@ -59,9 +48,6 @@
         }, 2000);
       }
     }
-
-
-
     Battle.prototype.attack = function() {
       // createCompAnimation.classList.remove('animate');
       const damage = Math.floor(Math.random() * 10) + 1;
@@ -76,7 +62,6 @@
       document.querySelector('.attack-button').style.visibility = 'hidden';
       // createPlayerAnimation.classList.add('animate');
       }
-
     Battle.prototype.counter = function() {
       // createPlayerAnimation.classList.remove('animate');
       // createCompAnimation.classList.add('animate');
@@ -90,21 +75,15 @@
       playerHpDisplay.innerHTML = (`${battle.player.health}%`);
       playerHpDisplay.style.width = `${battle.player.health}%`;
       document.querySelector('.attack-button').style.visibility = 'visible';
-
     }
-
 const battle = new Battle();
     const attackClick = document.querySelector('.attack-button');
-
 attackClick.addEventListener('click', function () {
   if(battle.player.health > 0 && battle.comp.health > 0){
   battle.start();
-
 }
 })
-
 const playAgainClick = document.querySelector('.reset');
-
 playAgainClick.addEventListener('click', function () {
   document.querySelector('.game-container').style.visibility = 'hidden';
   battle.player.health = 100;
@@ -116,9 +95,6 @@ playAgainClick.addEventListener('click', function () {
   playerAttackMessage.innerHTML = '';
   compAttackMessage.innerHTML = '';
 })
-
-
-
 const source = document.querySelector('.char-card').innerHTML;
 const template = Handlebars.compile(source);
 const context = {
@@ -127,10 +103,7 @@ const context = {
 const html = template(context);
 // console.log(html);
 document.querySelector('.dropdown-content').innerHTML = html;
-
-
 var elements = document.querySelectorAll('.selected-element')
-
 elements.forEach(function(element){
   element.addEventListener('click', function(event){
     const selectedElement = event.target.innerHTML;
@@ -160,15 +133,4 @@ elements.forEach(function(element){
       }
   })
 })
-
-
-// if (battle.player.health > battle.comp.health) {
-//   playerAttackMessage.innerHTML = 'YOU WIN!';
-//   compAttackMessage.innerHTML = '';
-// } else if (battle.player.health < battle.comp.health){
-//   playerAttackMessage.innerHTML = '';
-//   compAttackMessage.innerHTML = 'YOU LOSE!';
-// }
-
-
 })();

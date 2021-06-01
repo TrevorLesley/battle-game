@@ -1,28 +1,22 @@
-
 const charType = ({
     'results': [{
-
         'choiceElement': 'Water',
-        'Description': 'Befrese: Hydrokinesis',
+        'title': 'Befrese: Hyrdokensis',
         'Image': './images/water-elemental.jpeg',
     },
     {
         'choiceElement': 'Earth',
-        'Description': 'Gutrium: Geokinesis',
-        'title': 'Gutrium',
+        'title': 'Gutrium: Geokinesis',
         'Image': './images/earth-elemental.jpeg',
     },
     {
         'choiceElement': 'Fire',
-        'Description': 'Vustrite: Pyrokinesis',
-        'title': 'Vustrite',
+        'title': 'Vustrite: Pyrokinesis',
         'Image': './images/fire-elemental.jpeg',
-
     },
     {
         'choiceElement': 'Air',
-        'Description': 'Uthine: Air Manipulation',
-        'title': 'Uthine the Wind Knight',
+        'title': 'Uthine the Wind Knight: Wind Manipulation',
         'Image': './images/wind-elemental.jpeg',
     },
     ]
